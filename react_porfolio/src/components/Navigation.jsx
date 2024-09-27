@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-const Links = [
-    { label: 'Home', to: '/' },
-    { label: 'About', to: '/about' },
+const navLinks = [
+    { label: 'About', to: '/' },
     { label: 'Portfolio', to: '/portfolio' },
     { label: 'Contact', to: '/contact' },
-    { label: 'Resume', to: '/resume' },
+    { label: 'Resume', to: 'https://docs.google.com/document/d/1zXerM1hPAOscHX64T5fse9NrwcGqDuJFW9_wl2wv7Sk/edit', newTab: true },
 ];
 
 
@@ -18,7 +17,7 @@ function NavBar() {
         <nav className="navbar bg-white border-gray-200 dark:bg-gray-900 gloock-regular navbar">
             <div className="navbar_container max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <Link to="/">
-                    <img src="../images/leaf.png" alt="logo" className="h-40" />
+                    <h1 className='font-bold text-xl'>Heather Weltzien</h1>
                 </Link>
                 {/* Hamburger Menu Button */}
                 <button
@@ -51,12 +50,23 @@ function NavBar() {
                 <div className="hidden w-full md:block md:w-auto" id="navbar-default">
                     <ul className="font-medium flex flex-col items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:border-gray-700">
                         {navLinks.map((link) => (
-                            <li key={link.to}>
-                                <Link to={link.to}>
-                                    <button className="block py-2 px-3 text-green-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-blue-500  dark:hover:text-white md:dark:hover:bg-transparent">
+                            <li key={link.label}>
+                                {link.newTab ? (
+                                    <a
+                                        href={link.to}
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                                                           
                                         {link.label}
-                                    </button>
-                                </Link>
+                                    </a>
+                                ) : (
+                                    <Link to={link.to}>
+                                        <button className="block py-2 px-3 rounded  md:hover:bg-transparent md:border-0 md:p-0 dark:text-white md:dark:hover:text-blue-500  dark:hover:text-white md:dark:hover:bg-transparent">
+                                            {link.label}
+                                        </button>
+                                    </Link>
+                                )}
+                                
                             </li>
                         ))}
                         
@@ -73,7 +83,7 @@ function NavBar() {
                         {navLinks.map((link) => (
                             <li key={link.to}>
                                 <Link to={link.to}>
-                                    <button className="block py-2 px-3 text-green-900 rounded  md:hover:bg-transparent md:border-0 md:p-0 dark:text-white    md:dark:hover:bg-transparent">
+                                    <button className="block py-2 px-3 rounded  md:hover:bg-transparent md:border-0 md:p-0 dark:text-white    md:dark:hover:bg-transparent">
                                         {link.label}
                                     </button>
                                 </Link>
