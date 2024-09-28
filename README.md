@@ -17,9 +17,9 @@ by Heather Weltzien
 ## Usage
     Run npm run dev in the terminal. 
 
-<img src= "/images/screenshot.png" alt="screenshot">
+<img src= "./assets/screenshot.png" alt="screenshot">
 
-<a href="https://code-and-canvas-blog.onrender.com" target="_blank">Link to deployed application</a>
+<a href="https://hmwportfolio.netlify.app/" target="_blank">Link to deployed application</a>
 
 
 
