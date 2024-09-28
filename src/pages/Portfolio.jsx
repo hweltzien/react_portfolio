@@ -34,20 +34,17 @@ const projects = [
 ]
 const Portfolio = () => {
     return (
-        <section id="work-section" className="content-section">
-            <h2 className="aside-title">Portfolio</h2>
-            <div className="content-area">
-
-                <div className="w3-row-padding w3-margin-top container">
-                    {projects.map((project) => (
-                        <Project project={project} key={project.title} />
-                    ))}
-                </div>
-
-            </div>
-
-        </section>
-    )
-}
+      <section id="work-section" className="content-section">
+        <h2 className="aside-title montserrat m-5 text-4xl text-center">Portfolio</h2>
+        <div className="content-area flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project) => (
+              <Project project={project} key={project.title} />
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  };
 
 export default Portfolio

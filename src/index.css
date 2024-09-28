@@ -2,3 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    background-color: #CED4DA;
+    min-height: 100vh;
+    max-height: fit-content;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+
+
+  .navbar, .footer {
+    background-color: #6C757D;
+    padding: 1rem; /* Add padding to navbar and footer */
+    width: 100%; /* Ensure full width */
+  }
+  
+  .nav-link {
+    padding: 10px;
+    text-decoration: none; /* Remove underline */
+    color: #000; /* Default link color */
+}
+
+.nav-link.active {
+    background-color: #1d4ed8; /* Highlight color */
+    color: #fff; /* Change text color */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+
+.dancing-script {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  @media (max-width: 768px) {
+    .navbar, .footer {
+      background-color: #343A40; /* Darker shade for mobile view */
+    }
+  }
+  

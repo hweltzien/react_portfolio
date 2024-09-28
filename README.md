@@ -26,7 +26,6 @@ by Heather Weltzien
     
 ## Credits
 <ul>    
-    <li>Tutoring session with ____________</li>
     <li>Tutoring session with Nicholas Mtabo</li>
     <li><a href="https://www.youtube.com/watch?v=89NJdbYTgJ8&t=73s" target="_blank">Vite Crash Course</a></li>
 </ul>    
